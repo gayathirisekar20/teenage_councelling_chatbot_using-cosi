@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+{% block content %}
+<style>
+    body{
+        background: URL("https://img.freepik.com/free-photo/chat-bubbles-speech-bubble-icon-website-ui-pink-background-3d-rendering-illustration_56104-1313.jpg?w=1500");
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position:center center;
+    }
+.myblock{
+    border:1px solid black;
+    border-radius: 4%;
+    background: rgba(0,0,0,0.3);
+    margin-top:10%;
+    padding:3%;
+}
+.h1{
+    margin-bottom:5% ;
+    color:brown;
+}
+.mybtn{
+ background: rgba(0,0,0,0.5);
+}
+.myblock,.form-control{
+    width:80%;
+    text:center;
+}
+.mybtn{width:30%;}
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-12"></div>
+        <div class="col-lg-6 col-md-6 col-sm-12 myblock">
+            <h1 class="h1"><center><i>Signup Form</i></center></h1>
+            <form action="/signup" method="POST" class="form-group">
+                <div class="form-group">
+                    <center><input type="text" name="username" placeholder="Username" class="form-control"></center>
+                </div> <br>           
+            <div class="form-group">
+                <center><input type="email" name="email" placeholder="Email" class="form-control"></center>
+            </div><br>
+            <div class="form-group">
+                <center><input type="password" name="password" placeholder="Password" class="form-control"></center>
+            </div><br>
+            <div class="form-group">
+                <center><button type="submit" class="btn btn-block btn-dark mybtn form-control">Submit</button></center>
+                <br>
+                
+            </div><br>
+            <center><i><h6 style="color:black;">if you already have a accunt ,go to <a href="/" class="">Login</a></center></h6></i>
+            </form>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-12"></div>
+    </div>
+</div>
+
+
+{% endblock %}

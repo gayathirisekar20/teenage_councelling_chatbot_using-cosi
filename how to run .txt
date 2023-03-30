@@ -1,0 +1,4 @@
+open command prombt
+type "flask shell"
+db.create_all()
+exit()
